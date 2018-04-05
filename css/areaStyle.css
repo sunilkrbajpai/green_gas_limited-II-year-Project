@@ -1,0 +1,14 @@
+﻿#area {
+    height:340px;
+    width:940px;
+    background-color:yellowgreen;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:40px;
+    border-radius:10px;
+    padding:10px;
+    font-size:19px;
+    font-style:italic;
+    font-weight:bold;
+    color:#7c1f1f;
+}

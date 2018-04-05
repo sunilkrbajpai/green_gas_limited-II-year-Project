@@ -1,0 +1,36 @@
+﻿body {
+}
+#regbox {
+    height:380px;
+    width:960px;
+  
+    background-color:#b6ff00;
+    border-radius:10px;
+}
+.box {
+    width:440px;
+    height:180px;
+    padding:00px;
+    float:left;
+    font-size:20px;
+    color:brown;
+    font-family:Verdana;
+    font-weight:bold;
+    font-style:normal;
+}
+#table1{
+    height:180px;
+    width:390px;
+    color:black;
+    font-family:Verdana;
+    font-weight:bold;
+    font-style:italic;
+}
+#table2{
+    height:180px;
+    width:390px;
+    color:black;
+    font-family:Verdana;
+    font-weight:bold;
+    font-style:italic;
+}

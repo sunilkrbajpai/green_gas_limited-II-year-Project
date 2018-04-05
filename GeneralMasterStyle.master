@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GeneralMasterStyle.master.cs" Inherits="GeneralMasterStyle" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   
+  
+        <link rel="icon" href="images/ggllogo.png" />
+ 
+    
+    <script>
+        var img = 0;
+        var arr = [ "2.jpg", "4.jpg", "6.jpg", "1.jpg", "7.jpg", "8.jpg","9.jpg","3.jpg","10.jpg","5.jpg"];
+        function slider()
+        {
+            var images = document.getElementById("img1");
+            images.src = "images/slide/" + arr[img];
+            img++;
+            if (img == arr.length)
+            {
+                img = 0;
+            }
+            window.setTimeout("slider()", 2500);
+        }
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="GenralMasterStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/GenralMasterStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="slider()" style="background-color:#c0e42e">
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="header">
+                <div id="logo">
+                    <img src="images/gglLogo.gif" width="130" height="130" />
+                </div>
+                <div id="sitetitle">
+                    GREEN GAS LIMITED
+                </div>
+                </div>
+            <div id="menu">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                    <DynamicHoverStyle Font-Bold="True" Font-Size="X-Large" ForeColor="Yellow" BackColor="#33CC33" />
+                    <DynamicMenuItemStyle Font-Bold="True" ForeColor="Yellow" ItemSpacing="15px" BackColor="#339933" Font-Size="X-Large" HorizontalPadding="25px" VerticalPadding="10px" />
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="HOME" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Our Aim" Value="Our Aim" NavigateUrl="~/Area.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="ENQUIRY" NavigateUrl="~/Enquiry.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Gallery" Value="IMAGE GALLARY" NavigateUrl="~/ImageGallery.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Consumer" Value="CONSUMER REGISTRATION" NavigateUrl="#">
+                            <asp:MenuItem NavigateUrl="~/ConReg.aspx" Text="New Registration" Value="New Registeration"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/safety.aspx" Text="Safety" Value="Safety"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/aboutus.aspx" Text="About us" Value="About us"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="White" ForeColor="#6600FF" />
+                    <StaticMenuItemStyle Font-Bold="True" Font-Size="X-Large" ForeColor="Yellow" HorizontalPadding="25px" VerticalPadding="10px" />
+                    <StaticSelectedStyle Font-Size="X-Large" />
+                </asp:Menu>
+                </div>
+            <div id="slider">
+                <img id="img1" width="1000px" height="300px"/>
+            </div>
+            <div id="main">
+                <asp:ContentPlaceHolder ID="CPHMain" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+                <div id="lfooter" class="footerpart">
+                    <a href="http://www.facebook.com" target="_blank"><img src="images/facebook.png" height="50" width="50" style="border-radius:30px;margin-top:20px"/></a>
+                     <a href="http://www.twitter.com" target="_blank"><img src="images/twitter.png" height="50" width="50" style="border-radius:30px;margin-top:20px"/></a>
+                     <a href="http://www.youtube.com" target="_blank"><img src="images/youtube.png" height="50" width="50" style="border-radius:30px;margin-top:20px"/></a>
+                     <a href="http://www.yahoo.com" target="_blank"><img src="images/yahoo.png" height="50" width="50" style="border-radius:30px;margin-top:20px"/></a>
+                    <a href="http://www.gmail.com" target="_blank"><img src="images/gmail.png" height="50" width="50" style="border-radius:30px;margin-top:20px"/></a><br/><br/>
+                    
+                </div>
+                <div id="rfooter" class="footerpart">
+                <div style="width:70%;float:left";>
+                   
+                       <b><u> Group Members</b></u>:<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp; Anjani kumar mall<br/>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; Pooja Gupta<br/>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;   Rishabh singh<br/>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;   Sunil kumar bajpai
+                    <br/>
+                 
+                
+                   <center style="color :turquoise"> Copyright &copy; <a href="http://www.ietlucknow.ac.in" style="color :greenyellow">IET Lucknow</a></center>
+                </div>
+                <div style="width:30%;float:left">
+                    <img src="images/group.jpg" alt="group" width="140" height="100" style="border:1px solid blue;border-radius:5px" />
+                </div>
+            </div>
+                </div>
+    </div>
+    </form>
+</body>
+</html>
